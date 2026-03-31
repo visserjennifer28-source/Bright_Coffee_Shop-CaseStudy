@@ -1,89 +1,102 @@
-# Project Overview
+# Bright Coffee Shop Sales Analysis
 
+# Overview
 
-This project analyzes transactional data from Bright Coffee Shop to generate actionable business insights. The goal is to support decision-making by identifying revenue drivers, understanding customer behavior, and uncovering opportunities for growth.
+This case study focuses on analyzing historical transactional data from Bright Coffee Shop to uncover actionable business insights. The goal of the analysis is to support data-driven decision-making by identifying key revenue drivers, understanding customer purchasing behavior, and highlighting opportunities for growth.
 
-# Objectives
-Identify top-performing products
+The project explores sales performance across products, categories, and time intervals, providing strategic recommendations to improve overall business performance.
 
-Analyze sales trends across different time intervals
+# Approach & Methodology
 
-Evaluate product performance (revenue vs volume)
+# 1. Data Collection
 
-Provide strategic recommendations to increase revenue
+The dataset consists of transactional records from the coffee shop’s point-of-sale (POS) system, including:
 
-# Dataset Description
+* Product names and categories
 
+* Unit prices
 
-The dataset contains point-of-sale (POS) transaction records, including:
+* Quantity sold
 
-* Product Name & Category
+* Transaction timestamps
 
-* Unit Price
+# 2. Data Processing (ETL)
 
-* Quantity Sold
+A structured ETL (Extract, Transform, Load) process was implemented:
 
-* Transaction Date & Time
+* Data Cleaning: Removed duplicates and handled missing values
 
-* Methodology
+* Standardization: Ensured consistent formatting of unit prices and timestamps
 
+* Feature Engineering:
 
-# Data Processing (ETL)
-Cleaned dataset (removed nulls & duplicates)
+  a) Created total_amount (price × quantity)
 
-Standardized formats (price & timestamps)
+  b) Grouped timestamps into time intervals (30/60 minutes)
 
-Created calculated fields:
+# 3. Data Analysis
 
-total_amount = unit_price × quantity
+SQL queries and pivot tables were used to analyze:
 
-Grouped data into time buckets (30/60 mins)
+* Revenue by product category
 
+* Sales trends over time
 
+* Transaction volume patterns
 
-# Data Analysis
+* Product performance (top-sellers vs underperformers)
 
+# 4. Visualization
 
-Performed using SQL & pivot tables:
+Insights were presented using charts such as:
 
-Revenue by category
+* Bar charts (category revenue)
 
-Sales trends over time
+* Line graphs (sales trends over time)
 
-Transaction volume distribution
+* Column charts (transaction density)
 
-Product-level performance
-
-
-
-# Data Visualization
-* Bar Charts → Revenue by category
-
-* Line Charts → Sales trends
-
-* Column Charts → Transaction density
-
-* Pie Charts → Product contribution
+* Pie charts (product contribution)
 
 # Key Insights
-* Beverages dominate revenue, contributing the highest share of total sales
+* Top Revenue Drivers: Beverage products (e.g., coffee-based drinks) contributed the largest share of total revenue.
 
-* Top-selling items include espresso-based drinks and regular coffee
+* Best-Selling Products: High-volume items such as espresso and regular coffee dominated sales quantity.
 
-* Peak sales occur in the morning, driven by commuter demand
+* Peak Sales Periods: The morning hours (especially early commute times) generated the highest sales activity.
 
-* Afternoon slump identified with lower transaction volume
+* Low-Performance Periods: Mid-afternoon showed a noticeable drop in transaction volume.
 
-* Some products underperform and may require promotion or removal
+* Product Opportunities: Some items underperformed, indicating potential for promotional strategies or menu optimization.
 
-# Business Recommendations
-  * Launch targeted promotions during low-traffic hours
+# Summary of Findings
+
+The analysis revealed that a significant portion of revenue is driven by a limited number of high-performing products and peak time periods. Customer behavior is highly time-dependent, with strong demand during morning hours and reduced activity later in the day.
+
+By leveraging these insights, the business can:
 
 * Optimize inventory for high-demand products
 
-* Introduce product bundles (e.g., coffee + pastry deals)
+* Align staffing with peak hours
 
-* Align staffing with peak sales periods
+* Introduce targeted promotions during slower periods
 
-* Explore digital solutions (loyalty programs, mobile ordering)
+* Improve overall operational efficiency
+
+# Tools & Technologies Used
+* SQL – Data extraction, transformation, and aggregation
+
+* Snowflake – Data storage and querying
+
+* Microsoft Excel – Pivot tables and data visualization
+
+* PowerPoint – Presentation of insights
+
+* Miro – Data architecture and workflow visualization
+
+# Conclusion
+
+This case study demonstrates the value of data analytics in driving business decisions. By transforming raw transactional data into meaningful insights, Bright Coffee Shop can enhance its sales strategy, improve customer experience, and unlock new growth opportunities.
+
+
 
